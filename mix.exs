@@ -11,7 +11,7 @@ defmodule Trot.Mixfile do
      name: "Trot",
      docs: [readme: "README.md", main: "README",
             source_ref: "v#{@version}",
-            source_url: "https://github.com/hexedpackets/trot"],
+            source_url: "https://github.com/creditx/trot"],
 
      # Hex
      description: description(),
@@ -25,15 +25,15 @@ defmodule Trot.Mixfile do
 
   defp deps do
     [
-      {:plug, "~> 1.1"},
-      {:cowboy, "~> 1.0"},
-      {:poison, "~> 1.4"},
-      {:calliope, "~> 0.3.0"},
-      {:plug_heartbeat, "~> 0.1"},
+      {:plug, "~> 1.3"},
+      {:cowboy, "~> 1.1"},
+      {:poison, "~> 3.1"},
+      {:calliope, "~> 0.4.0"},
+      {:plug_heartbeat, "~> 0.2"},
       {:earmark, "~> 0.1", only: :dev},
       {:ex_doc, "~> 0.7", only: :dev},
       {:inch_ex, only: :docs},
-      {:credo, "~> 0.4", only: [:dev, :test]},
+      {:credo, "~> 0.8", only: [:dev, :test]},
     ]
   end
 
