@@ -25,9 +25,12 @@ defmodule Trot.Mixfile do
 
   defp deps do
     [
-      {:plug, "~> 1.3"},
-      {:cowboy, "~> 1.1"},
-      {:poison, "~> 3.1"},
+      {:plug_cowboy2, github: "voicelayer/plug_cowboy2"},
+      {:ranch, github: "ninenines/ranch", ref: "master", override: true, manager: :rebar3},
+      {:cowlib, github: "ninenines/cowlib", ref: "master", override: true, manager: :rebar3},
+      {:plug, "~> 1.3.0"},
+      {:cowboy, github: "ninenines/cowboy", ref: "2.0.0-pre.9", override: true, manager: :rebar3},
+      {:poison, "~> 3.1", override: true},
       {:calliope, "~> 0.4.0"},
       {:plug_heartbeat, "~> 0.2"},
       {:earmark, "~> 0.1", only: :dev},
